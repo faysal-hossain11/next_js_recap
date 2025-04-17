@@ -1,23 +1,8 @@
+import { addUser } from "@/actions/userAction";
 import React from "react";
 
 const CreateUser = () => {
-    const addUser = async (formData: any) => {
-        "use server"
-        const fName = formData.get("firstName");
-        const lName = formData.get("lastName");
-        const email = formData.get("email");
-        const password = formData.get("password");
-        
-        const newUser = {
-            fName,
-            lName,
-            email,
-            password
-        }
-
-        console.log("New User Created", newUser);
-
-    }
+    
   return (
     <form action={addUser} className="w-3/5 mx-auto p-10 rounded-md bg-blue-400 border-1" outline-none>
       <div className="mb-4">

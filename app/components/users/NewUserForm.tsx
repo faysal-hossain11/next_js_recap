@@ -1,29 +1,12 @@
+import { addUser2 } from '@/actions/userAction';
 import connectMongo from '@/dbConnect/connectMongo';
 import User from '@/models/User';
 import React from 'react';
 
 const NewUserForm = () => {
-    const addUser = async (formData: any) => {
-        "use server";
 
-        const name = formData.get("name")
-        const email = formData.get("email")
-
-        const userData = {
-            name,
-            email
-        };
-
-        // db connention
-        await connectMongo();
-
-        // insert into database
-        await new User(userData).save();
-
-
-    }
     return (
-        <form action={addUser} className='w-full'>
+        <form action={addUser2} className='w-full'>
             <div className="mb-5">
                 <label htmlFor="name" className='mb-2'>Name</label>
                 <input type="text" name='name' placeholder='name' className='w-full py-2 px-3 outline-none border rounded-sm' />
