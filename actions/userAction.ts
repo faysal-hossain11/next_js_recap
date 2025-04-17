@@ -50,6 +50,7 @@ export const addUser2 = async (formData: any) => {
     name,
     email,
   };
+  
 
 //   try {
 //     // db connention
