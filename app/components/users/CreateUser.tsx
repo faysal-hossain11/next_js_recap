@@ -1,10 +1,13 @@
+
 import { addUser } from "@/actions/userAction";
 import React from "react";
 
 const CreateUser = () => {
-    
+  
+  const addUserFlag = addUser.bind(null, "Pro");
+
   return (
-    <form action={addUser} className="w-3/5 mx-auto p-10 rounded-md bg-blue-400 border-1" outline-none>
+    <form action={addUserFlag} className="w-3/5 mx-auto p-10 rounded-md bg-blue-400 border-1" outline-none>
       <div className="mb-4">
         <label htmlFor="firstName">First Name:</label>
         <input
